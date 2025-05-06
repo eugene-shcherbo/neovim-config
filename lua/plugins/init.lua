@@ -5,7 +5,7 @@ return {{
         local configs = require("nvim-treesitter.configs")
 
         configs.setup({
-            ensure_installed = {"go", "lua", "vim"},
+            ensure_installed = {"go", "lua", "vim", "c_sharp"},
             sync_install = false,
             highlight = {
                 enable = true
@@ -86,6 +86,7 @@ return {{
 }, {
     'rmagatti/auto-session',
     lazy = false,
+		enable = false,
     ---enables autocomplete for opts
     ---@module "auto-session"
     ---@type AutoSession.Config

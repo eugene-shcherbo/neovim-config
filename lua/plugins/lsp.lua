@@ -14,6 +14,19 @@ return {{
             }
         })
 
+			vim.lsp.config('omnisharp', {
+				capabilities = capabilities
+			})	
+
+			vim.lsp.enable('omnisharp')
+
 				vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, { desc = "LSP: Rename Symbol" })
     end
-}}
+},
+	{
+		"OmniSharp/omnisharp-vim",
+		init = function()
+			vim.g.OmniSharp_server_use_net6 = 1
+		end
+	}
+}
