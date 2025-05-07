@@ -6,5 +6,6 @@ vim.keymap.set("c", "%%", function()
   return vim.fn.expand("%:p:h")
 end, { expr = true })
 
+vim.diagnostic.config({ virtual_text = true })
 vim.cmd.colorscheme "catppuccin"
 
